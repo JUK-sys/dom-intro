@@ -11,3 +11,21 @@
 //  * once done looping over all the entries - display the total onto the screen in the billTotal element
 
 //link the function to a click event on the calculate button
+
+
+//Logic function
+function totalPhoneBill(totalData) {
+    var data = totalData.split(',');
+    var total = 0;
+    for (var i = 0; i < data.length; i++) {
+  
+      if (data[i] === 'call') {
+        total += 2.75;
+        console.log(total);
+      } else if (data[i] === 'sms') {
+        total += 0.75;
+        console.log(total);
+      }
+    }
+    return total.toFixed(2);
+  }
